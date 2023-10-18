@@ -9,4 +9,8 @@ test('Making sure that the starwars logo renders on screen', () => {
   expect(logoImg).toBeInTheDocument()
 })
 
-test('Making sure buttons render on screen ')
+test('Making sure buttons render on screen', () => {
+  const { getByTestId } = rtl.render(<App />);
+  getByTestId('prev')
+  getByTestId('next')
+})
